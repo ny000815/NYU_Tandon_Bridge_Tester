@@ -20,14 +20,14 @@ Run the following command to compile the program:
 make -f Makefile.q2_env
 ```
 
-###2. Run the Tests
+### 2. Run the Tests
 Execute the tests using:
 ```bash
 make -f Makefile.q2_env test
 ```
 This command runs the tests in a controlled environment where the SEED environment variable is set (inside a subshell) to ensure reproducible results.
 
-###3. Clean Up
+### 3. Clean Up
 To remove compiled binaries and temporary test output files, run:
 ```bash
 make -f Makefile.q2_env clean
