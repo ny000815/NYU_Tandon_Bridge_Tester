@@ -46,8 +46,11 @@ make -f Makefile.q2_env clean
 
 ## Execution Example
 ![alt](../images/w5-0.png)
+
 ![alt](../images/w5-1.png)
+
 ![alt](../images/w5-2-1.png)
+
 ![alt](../images/w5-2-2.png)
 
 
