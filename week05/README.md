@@ -25,7 +25,6 @@ Execute the tests using:
 ```bash
 make -f Makefile.q2_env test
 ```
-This command runs the tests in a controlled environment where the SEED environment variable is set (inside a subshell) to ensure reproducible results.
 
 ### 3. Clean Up
 To remove compiled binaries and temporary test output files, run:
