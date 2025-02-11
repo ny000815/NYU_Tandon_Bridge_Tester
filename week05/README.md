@@ -12,17 +12,6 @@ This tester is designed for the Week 5 homework C++ programs. In particular, the
     brew install libfaketime
     ```
 
-## Files Included
-- `yn2459_hw5_q2_env.cpp`  
-  A modified version of the Q2 source code that uses the environment variable `SEED` to control the random seed. If `SEED` is not set, the program falls back to using `time(0)`.
-- `Makefile.q2_env`  
-  The Makefile that compiles `yn2459_hw5_q2_env.cpp` and runs tests with fixed `SEED` values.
-- **Test Files for Q2:**
-  - `q2-1.in` and `q2-1.expected`  
-    Input and expected output for test case 1.
-  - `q2-2.in` and `q2-2.expected`  
-    Input and expected output for test case 2.
-
 ## How to Use
 
 ### 1. Compile the Tester
