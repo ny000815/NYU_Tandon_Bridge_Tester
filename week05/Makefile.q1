@@ -1,0 +1,42 @@
+SHELL = /bin/bash
+
+SRCS    = $(wildcard *hw5_q1.cpp)
+TARGETS = $(SRCS:.cpp=.out) 
+
+TEST_INPUT = tests/q1.in
+EXPECTED_OUTPUT = tests/q1.expected
+ACTUAL_OUTPUT = tests/q1.out
+
+GREEN  = \033[32m
+RED    = \033[31m
+RESET  = \033[0m
+
+
+$(TARGETS): %.out: %.cpp
+	$(CXX) -o $@ $<
+
+run: $(TARGETS)
+	./$(TARGETS)
+
+test: $(TARGETS)
+	@echo "Running test..."
+	@echo "Input:"
+	@cat $(TEST_INPUT)
+	@echo "------------------------"
+	@echo "Expected Output:"
+	@cat $(EXPECTED_OUTPUT)
+	@echo "------------------------"
+	@echo "Program Output:"
+	@./$(TARGETS) < $(TEST_INPUT) > $(ACTUAL_OUTPUT)
+	@cat $(ACTUAL_OUTPUT)
+	@echo "------------------------"
+	@diff -u $(EXPECTED_OUTPUT) $(ACTUAL_OUTPUT) > /dev/null && \
+		echo -e "Test1: $(GREEN)[OK]$(RESET)" || \
+		echo -e "Test1: $(RED)[FAIL]$(RESET)\n Hint:cat -t q1.expected && echo "----" &&cat -t q1.out"
+	@rm -f $(ACTUAL_OUTPUT)
+
+# Clean up compiled files
+clean:
+	rm -f $(TARGETS) $(ACTUAL_OUTPUT)
+
+.PHONY: all run test clean

@@ -1,0 +1,63 @@
+SHELL = /bin/bash
+SRCS = yn2459_hw5_q2.cpp
+TARGET = yn2459_hw5_q2.out
+
+TEST1_IN = tests/q2-1.in
+TEST1_EXPECTED = tests/q2-1.expected
+TEST1_OUT = tests/q2-1.out
+
+TEST2_IN = tests/q2-2.in
+TEST2_EXPECTED = tests/q2-2.expected
+TEST2_OUT = tests/q2-2.out
+
+GREEN  = \033[32m
+RED    = \033[31m
+RESET  = \033[0m
+
+# コンパイル
+$(TARGET): $(SRCS)
+	$(CXX) -o $(TARGET) $(SRCS)
+
+run: $(TARGET)
+	./$(TARGET)
+
+test: $(TARGET) test1 test2
+
+test1:
+	@echo "Running test case 1..."
+	@echo "Input:"
+	@cat $(TEST1_IN)
+	@echo "------------------------"
+	@echo "Expected Output:"
+	@cat $(TEST1_EXPECTED)
+	@echo "------------------------"
+	@echo "Program Output:"
+	@faketime '2000-01-01 00:00:01' ./$(TARGET) < $(TEST1_IN) > $(TEST1_OUT)
+	@cat $(TEST1_OUT)
+	@echo "------------------------"
+	@diff -u $(TEST1_EXPECTED) $(TEST1_OUT) > /dev/null && \
+		echo -e "Test1: $(GREEN)[OK]$(RESET)" || \
+		echo -e "Test1: $(RED)[FAIL]$(RESET)"
+	@rm -f $(TEST1_OUT)
+
+test2:
+	@echo "Running test case 2..."
+	@echo "Input:"
+	@cat $(TEST2_IN)
+	@echo "------------------------"
+	@echo "Expected Output:"
+	@cat $(TEST2_EXPECTED)
+	@echo "------------------------"
+	@echo "Program Output:"
+	@faketime '2000-01-01 00:00:01' ./$(TARGET) < $(TEST2_IN) > $(TEST2_OUT)
+	@cat $(TEST2_OUT)
+	@echo "------------------------"
+	@diff -u $(TEST2_EXPECTED) $(TEST2_OUT) > /dev/null && \
+		echo -e "Test2: $(GREEN)[OK]$(RESET)" || \
+		echo -e "Test2: $(RED)[FAIL]$(RESET)"
+	@rm -f $(TEST2_OUT)
+
+clean:
+	rm -f $(TARGET) $(TEST1_OUT) $(TEST2_OUT)
+
+.PHONY: all run test test1 test2 clean

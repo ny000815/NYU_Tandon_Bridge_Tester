@@ -1,0 +1,15 @@
+I thought of a number between 1 and 100! Try to guess it.
+Range: [1, 100], Number of guess left: 5
+Your guess: Wrong! My number is bigger.
+
+Range: [16, 100], Number of guess left: 4
+Your guess: Wrong! My number is smaller.
+
+Range: [16, 49], Number of guess left: 3
+Your guess: Wrong! My number is bigger.
+
+Range: [4, 49], Number of guess left: 2
+Your guess: Wrong! My number is smaller.
+
+Range: [4, 33], Number of guess left: 1
+Your guess: Out of guesses! My number is 32
