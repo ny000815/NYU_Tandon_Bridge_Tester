@@ -1,7 +1,5 @@
 # NYU Tandon Bridge - Winter 2025 28 week 🚀
 
-## Overview
-
 >The NYU Tandon Bridge course was developed to build foundational skills in those without a technical background in order to prepare for applying to our select STEM graduate programs. 
 <br>100% online course taught by faculty of the NYU Tandon Computer Science department
 
