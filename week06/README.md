@@ -10,6 +10,26 @@ This tester is designed for the Week 6 homework C++ programs.
 - **C++ Compiler**
 - **Make**
 
+## Tester Files Placement
+```
+.
+├── Makefile
+├── tests
+│   ├── q1-1.expected
+│   ├── q1-1.in
+│   ├── q1-2.expected
+│   ├── q1-2.in
+│   ├── ...
+│   ├── q2main_a.cpp
+│   ├── q2main_b.cpp
+│   ├── q2.h
+│   ├── ...
+├── yn2459_hw6_q1.cpp
+├── yn2459_hw6_q2.cpp
+├── yn2459_hw6_q3.cpp
+└── yn2459_hw6_q4.cpp
+```
+
 ## How to Use
 
 ### 1. Compile & Run the Tester
