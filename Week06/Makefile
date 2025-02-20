@@ -12,7 +12,6 @@ TESTS2 = 1 2
 
 SRCS3    = $(wildcard *hw6_q3.cpp)
 TARGETS3 = $(SRCS3:.cpp=.out) 
-
 SRCS4    = $(wildcard *hw6_q4.cpp)
 TARGETS4 = $(SRCS4:.cpp=.out) 
 
