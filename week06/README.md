@@ -2,8 +2,9 @@
 
 ## Overview
 This tester is designed for the Week 6 homework C++ programs. 
-
->⚠️ **Warning** test 2 may fail if you have main funciont in your own cpp file
+ 
+> [!WARNING]
+> q2 tester may fail if you have main funciontion in your own cpp file
 
 ## Prerequisites
 - **C++ Compiler**
@@ -14,13 +15,13 @@ This tester is designed for the Week 6 homework C++ programs.
 ### 1. Compile & Run the Tester
 Run the following command to compile and execute the program:
 ```bash
-make test 1
+make test1
 ```
 ```bash
-make test 2a
+make test2a
 ```
 ```bash
-make test 2b
+make test2b
 ```
 
 ### 3. Clean Up
