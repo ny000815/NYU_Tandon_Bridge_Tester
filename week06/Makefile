@@ -12,8 +12,11 @@ TESTS2 = 1 2
 
 SRCS3    = $(wildcard *hw6_q3.cpp)
 TARGETS3 = $(SRCS3:.cpp=.out) 
+HEADER2 = tests/q3.h
+
 SRCS4    = $(wildcard *hw6_q4.cpp)
 TARGETS4 = $(SRCS4:.cpp=.out) 
+TESTS4 = 1 2 3 4
 
 
 GREEN  = \033[32m
@@ -30,8 +33,11 @@ $(TARGETS2A): $(SRCS2) $(HEADER2)
 $(TARGETS2B): $(SRCS2) $(HEADER2)
 	c++ -o $@ tests/q2main_b.cpp $(SRCS2) -I.	
 
-run: $(TARGETS1)
-	./$(TARGETS1)
+$(TARGETS3): $(SRCS3) $(HEADER3)
+	c++ -o $@ tests/q3main.cpp $(SRCS3) -I.	
+
+$(TARGETS4): $(TARGETS3) 
+	c++ -o $@ $(SRCS4) 
 
 test1 : $(TARGETS1)
 	@echo "Running tests..."
@@ -99,8 +105,50 @@ test2b : $(TARGETS2B)
 	  echo "------------------------"; \
 	done
 
+test3 : $(TARGETS3)
+	@echo "Running test..."
+	@echo "Input:"
+	main="tests/q3main.cpp"; \
+	expected="tests/q3.expected"; \
+	actual="tests/q3.out"; \
+	echo "test cases:"; \
+	cat $$main | grep "int test"; \
+	echo "------------------------"; \
+	echo "Expected Output:"; \
+	cat $$expected; \
+	echo "------------------------"; \
+	./$(TARGETS3) > $$actual 2>&1; \
+	echo "Program Output:"; \
+	cat $$actual; \
+	diff -u $$expected $$actual > /dev/null && \
+	    echo -e "Test 3: $(GREEN)[OK]$(RESET)" || \
+	    echo -e "Test 3: $(RED)[FAIL]$(RESET)"; \
+	echo "------------------------"; \
+
+test4 : $(TARGETS4)
+	@echo "Running tests..."
+	@for i in $(TESTS4); do \
+	  echo "Test $$i:"; \
+	  input="tests/q4-$$i.in"; \
+	  expected="tests/q4-$$i.expected"; \
+	  actual="tests/q4-$$i.out"; \
+	  echo "Input:"; \
+	  cat $$input; \
+	  echo "------------------------"; \
+	  echo "Expected Output:"; \
+	  cat $$expected; \
+	  echo "------------------------"; \
+	  ./$(TARGETS4) < $$input > $$actual 2>&1; \
+	  echo "Program Output:"; \
+	  cat $$actual; \
+	  diff -u $$expected $$actual > /dev/null && \
+	    echo -e "Test $$i: $(GREEN)[OK]$(RESET)" || \
+	    echo -e "Test $$i: $(RED)[FAIL]$(RESET)"; \
+	  echo "------------------------"; \
+	done
+
 
 clean:
-	rm -f $(TARGETS1) $(TARGETS2A) $(TARGETS2B) tests/*.out 
+	rm -f $(TARGETS1) $(TARGETS2A) $(TARGETS2B) $(TARGETS3) $(TARGETS4)tests/*.out 
 
 .PHONY: all run test clean
