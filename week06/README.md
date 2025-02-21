@@ -1,4 +1,4 @@
-# Week 6 Tester
+# Week 6 Tester 🐊
 
 ## Overview
 This tester is designed for the Week 6 homework C++ programs. 
