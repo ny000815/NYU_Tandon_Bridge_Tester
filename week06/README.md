@@ -3,7 +3,7 @@
 ## Overview
 This tester is designed for the Week 6 homework C++ programs. 
  
-> [!WARNING]
+> [!CAUTION]
 > Q2 tester may fail if you have main funciontion in your own cpp file
 
 ## Prerequisites
