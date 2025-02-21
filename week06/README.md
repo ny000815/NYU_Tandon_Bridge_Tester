@@ -39,8 +39,14 @@ make test2a
 ```bash
 make test2b
 ```
+```bash
+make test3
+```
+```bash
+make test4
+```
 
-### 3. Clean Up
+### 2. Clean Up
 To remove compiled binaries and temporary test output files, run:
 ```bash
 make clean
