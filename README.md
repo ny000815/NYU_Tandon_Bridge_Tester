@@ -9,11 +9,13 @@
 
 | <div align="center">week</div> | topic | <div align="center">status</div> |
 | ---	| ---	| --- |
-| <div align="center">[week_05](https://github.com/ny000815/NYU_Tandon_Bridge_Tester/tree/main/week05)</div> | Loops | <div align="center">✅</div> |
-| <div align="center">[week_06](https://github.com/ny000815/NYU_Tandon_Bridge_Tester/tree/main/week06)</div> | Static Arrays, User Functions | <div align="center">✅</div> |
+| <div align="center">[week_5](https://github.com/ny000815/NYU_Tandon_Bridge_Tester/tree/main/week05)</div> | Loops | <div align="center">✅</div> |
+| <div align="center">[week_6](https://github.com/ny000815/NYU_Tandon_Bridge_Tester/tree/main/week06)</div> | Static Arrays, User Functions | <div align="center">✅</div> |
 
 </div>
 
+> [!NOTE]
+> I have requested a deferral for the Spring 2025 term. Please wait for my return.
 
 ## Course Topics
 
