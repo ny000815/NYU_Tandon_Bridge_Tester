@@ -20,10 +20,10 @@ This tester is designed for the Week 6 homework C++ programs.
 │   ├── q1-2.expected
 │   ├── q1-2.in
 │   ├── ...
-├── yn2459_hw6_q1.cpp
-├── yn2459_hw6_q2.cpp
-├── yn2459_hw6_q3.cpp
-└── yn2459_hw6_q4.cpp
+├── *_hw6_q1.cpp
+├── *_hw6_q2.cpp
+├── *_hw6_q3.cpp
+└── *_hw6_q4.cpp
 ```
 
 ## How to Use
