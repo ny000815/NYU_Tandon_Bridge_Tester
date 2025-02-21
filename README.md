@@ -9,8 +9,8 @@
 
 | <div align="center">week</div> | topic | <div align="center">status</div> |
 | ---	| ---	| --- |
-| <div align="center">[week_05](https://https://github.com/ny000815/NYU_Tandon_Bridge_Tester/tree/main/week05)</div> | Loops | <div align="center">✅</div> |
-| <div align="center">[week_06](https://https://github.com/ny000815/NYU_Tandon_Bridge_Tester/tree/main/week06)</div> | Static Arrays, User Functions | <div align="center">✅</div> |
+| <div align="center">[week_05](https://https://github.com/ny000815/NYU_Tandon_Bridge_Tester/week05)</div> | Loops | <div align="center">✅</div> |
+| <div align="center">[week_06](https://https://github.com/ny000815/NYU_Tandon_Bridge_Tester/week06)</div> | Static Arrays, User Functions | <div align="center">✅</div> |
 
 </div>
 
