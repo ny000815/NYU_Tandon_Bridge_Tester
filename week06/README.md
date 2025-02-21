@@ -3,9 +3,6 @@
 ## Overview
 This tester is designed for the Week 6 homework C++ programs. 
  
-> [!TIP]
-> Q2 and Q3 tester may fail if you have main funciontion in your own cpp file
-
 ## Prerequisites
 - **C++ Compiler**
 - **Make**
@@ -45,6 +42,10 @@ make test3
 ```bash
 make test4
 ```
+
+> [!TIP]
+> Q2 and Q3 tester may fail if you have main funciontion in your own cpp file
+
 
 ### 2. Clean Up
 To remove compiled binaries and temporary test output files, run:
