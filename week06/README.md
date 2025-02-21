@@ -4,7 +4,7 @@
 This tester is designed for the Week 6 homework C++ programs. 
  
 > [!TIP]
-> Q2 tester may fail if you have main funciontion in your own cpp file
+> Q2 and Q3 tester may fail if you have main funciontion in your own cpp file
 
 ## Prerequisites
 - **C++ Compiler**
